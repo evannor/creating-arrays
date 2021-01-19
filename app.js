@@ -61,3 +61,16 @@ const sum = prices.reduce((prevValue, currentValue) => {
   return prevValue + currentValue;
 }, 0);
 console.log(sum);
+
+// String methods that can be used on arrays
+const data = "new york;10.99;2000";
+
+// Transform string to an array
+const transformedData = data.split(";");
+console.log(transformedData);
+
+// Transform array to a string
+const nameFragment = ["Erica", "Maxine", "Smith"];
+// const name = nameFragment.join();
+const name = nameFragment.join(" ");
+console.log(name);
