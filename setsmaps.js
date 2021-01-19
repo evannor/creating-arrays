@@ -17,19 +17,30 @@
 //   console.log(entry);
 // }
 
-const person1 = { name: "Jeff" };
-const person2 = { name: "Fred" };
+// const person1 = { name: "Jeff" };
+// const person2 = { name: "Fred" };
 
-const personData = new Map([[person1, [{ date: new Date(), price: 10 }]]]);
-// console.log(personData);
-// console.log(personData.get(person1));
+// const personData = new Map([[person1, [{ date: new Date(), price: 10 }]]]);
+// // console.log(personData);
+// // console.log(personData.get(person1));
 
-personData.set(person2, [{ date: new Date(), price: 35 }]);
-// console.log(personData);
+// personData.set(person2, [{ date: new Date(), price: 35 }]);
+// // console.log(personData);
 
-for (const [key, value] of personData.entries()) {
-  console.log(key, value);
-}
+// for (const [key, value] of personData.entries()) {
+//   console.log(key, value);
+// }
 
 // map methods
 // clear, delete, entries, forEach, get, has, keys, set, size, values
+
+let person = { name: "Marie" };
+// WeakSet has to be object data
+const persons = new WeakSet();
+persons.add(person);
+console.log(persons);
+
+const personData = new WeakMap();
+personData.set(person, "You want to throw in some temp associated info.");
+
+console.log(personData);
